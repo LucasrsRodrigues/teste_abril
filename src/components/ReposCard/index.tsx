@@ -22,7 +22,8 @@ export function ReposCard({ repo }: IReposCardProps) {
 
   return (
     <S.ReposCardContainer onPress={() => navigate('WebView', {
-      url: repo.html_url
+      url: repo.html_url,
+      title: repo.name
     })}>
       <S.CardImage source={{ uri: repo.owner.avatar_url }} />
       <S.CardWrapper>

@@ -12,7 +12,11 @@ function StackRoute() {
           headerShown: false
         }}
       />
-      <Screen name="WebView" component={WebView} />
+      <Screen
+        name="WebView"
+        component={WebView}
+        options={({ route }) => ({ title: route.params.title })}
+      />
     </Navigator>
   );
 }
